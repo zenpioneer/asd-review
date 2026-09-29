@@ -276,6 +276,7 @@ ul, ol { margin: 0 0 1em; }
 .check-list li::before { content: "✓"; position: absolute; left: 0; top: 10px; color: var(--ok); font-weight: 700; }
 .cross-list li::before { content: "✕"; position: absolute; left: 0; top: 10px; color: var(--no); font-weight: 700; }
 .panel-note { margin: 14px 0 0; font-size: .85rem; color: var(--text-mute); }
+.panel-wide { margin-top: 22px; }
 
 /* Author */
 .author-wrap { display: grid; grid-template-columns: 128px 1fr; gap: 28px; align-items: start; }
