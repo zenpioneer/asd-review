@@ -57,18 +57,37 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg); }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   line-height: 1.7;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--bg) 54%, transparent),
+      color-mix(in srgb, var(--bg) 86%, transparent)
+    ),
+    url("nature.jpg");
+  background-size: cover, cover;
+  background-position: center, center 38%;
+  background-repeat: no-repeat, no-repeat;
+  filter: saturate(.45) contrast(1.02);
+  opacity: 1;
 }
 
 body::before {
@@ -78,13 +97,13 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(1000px 560px at 105% -12%, var(--accent-soft), transparent 62%),
-    radial-gradient(760px 460px at -12% 4%, var(--warm-soft), transparent 58%),
+    radial-gradient(1000px 560px at 105% -12%, color-mix(in srgb, var(--accent-soft) 70%, transparent), transparent 62%),
+    radial-gradient(760px 460px at -12% 4%, color-mix(in srgb, var(--warm-soft) 55%, transparent), transparent 58%),
     radial-gradient(var(--dot) 1px, transparent 1.3px);
   background-size: auto, auto, 24px 24px;
   background-repeat: no-repeat, no-repeat, repeat;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 88%);
-  mask-image: linear-gradient(180deg, #000 0%, #000 42%, transparent 88%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, transparent 90%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 46%, transparent 90%);
 }
 
 h1, h2, h3 { margin: 0 0 .45em; line-height: 1.15; font-family: var(--font-serif); font-weight: 600; letter-spacing: -.01em; }
@@ -304,6 +323,7 @@ ul, ol { margin: 0 0 1em; }
 .footer-title { font-family: var(--font-serif); font-weight: 700; margin: 0 0 10px; }
 .footer-disc { font-size: .89rem; color: var(--text-mute); }
 .footer-meta { font-size: .85rem; color: var(--text-mute); margin: 20px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-credit { font-size: .78rem; color: var(--text-mute); margin: 12px 0 0; }
 .footer-sep { color: var(--line-strong); }
 
 @media (max-width: 900px) {
