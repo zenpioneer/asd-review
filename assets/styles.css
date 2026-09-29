@@ -130,6 +130,13 @@ img { max-width: 100%; display: block; }
 }
 .intro h1 { font-size: clamp(2.1rem, 5.3vw, 3.6rem); letter-spacing: -.015em; margin: 0 0 .55em; }
 .standfirst { font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.55; color: var(--ink-soft); max-width: 60ch; }
+
+.keypoints { margin: 36px 0 0; border-top: 1px solid var(--rule); padding-top: 20px; max-width: 900px; }
+.keypoints-label { text-transform: uppercase; letter-spacing: .16em; font-size: .68rem; font-weight: 600; color: var(--accent); margin: 0 0 6px; }
+.keypoints ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
+.keypoints li { position: relative; padding: 14px 0 14px 22px; border-top: 1px solid var(--rule); font-size: .94rem; color: var(--ink-soft); }
+.keypoints li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
 .fineprint {
   font-size: .85rem; color: var(--ink-mute); max-width: 58ch; margin: 30px 0 0;
   border-left: 2px solid var(--rule-strong); padding-left: 15px;
@@ -255,6 +262,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   body { font-size: 16px; }
   .wrap { padding: 0 20px; }
+  .keypoints ul { grid-template-columns: 1fr; }
   .figures > div { grid-template-columns: 1fr; gap: 6px; }
   .outline li { grid-template-columns: 38px minmax(0, 1fr); gap: 14px; }
   .hypothesis { grid-template-columns: 1fr; gap: 10px; }

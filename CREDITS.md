@@ -2,10 +2,10 @@
 
 ## Background photograph
 
-- **“Dokkadeltaet nord i Randsfjorden”** by **Øyvind Holmstad** — source: Wikimedia Commons, via Openverse.
+- **“Cardada Cimetta”** (Lake Maggiore / Locarno area, Ticino, Switzerland) by **JHenryW** — source: Wikimedia Commons, via Openverse.
 - License: **CC0 1.0 Universal (Public Domain Dedication)** — https://creativecommons.org/publicdomain/zero/1.0/
-- Source page: https://commons.wikimedia.org/wiki/File:Dokkadeltaet_nord_i_Randsfjorden.jpg
-- Original: 5184×3456; the version in this repository (`assets/nature.jpg`) is
+- Source page: https://commons.wikimedia.org/wiki/File:Cardada_Cimetta.jpg
+- Original: 7187×4952; the version in this repository (`assets/nature.jpg`) is
   cropped to 16:9 and resized to 1920×1080, with no other modifications.
 
 ## Typefaces (self-hosted, `assets/fonts/`)

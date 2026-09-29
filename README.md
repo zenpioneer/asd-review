@@ -12,6 +12,7 @@ permeability, aldehydes).
 - `assets/script.js` — theme toggle, contents rail, scroll-spy, reveal animation
 - `assets/fonts/` — self-hosted Inter and Source Serif 4 (SIL OFL 1.1)
 - `assets/nature.jpg` — background photo (CC0)
+- `assets/og.jpg` — social preview image (1200×630)
 - `assets/favicon.svg` — icon
 - `CREDITS.md` — photo and font licenses
 - `.nojekyll` — serve files as-is on GitHub Pages

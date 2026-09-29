@@ -57,7 +57,10 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         links.forEach(function (link) {
-          link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id);
+          var active = link.getAttribute("href") === "#" + entry.target.id;
+          link.classList.toggle("is-active", active);
+          if (active) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
         });
       });
     }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
