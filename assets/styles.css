@@ -170,6 +170,8 @@ img { max-width: 100%; display: block; }
 .chapter h2 { font-size: clamp(1.5rem, 3vw, 2.05rem); letter-spacing: -.015em; margin: 0; }
 .chapter p { color: var(--ink-soft); }
 .chapter p strong, .chapter p em { color: var(--ink); }
+.chapter h3 { font-size: 1.18rem; margin: 1.8em 0 .5em; }
+.chapter .lead { font-size: 1.08rem; }
 .note { font-size: .85rem; color: var(--ink-mute); }
 
 /* Figures */
@@ -177,14 +179,6 @@ img { max-width: 100%; display: block; }
 .figures > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 28px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
 .figures dt { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); }
 .figures dd { margin: 0; font-size: .95rem; color: var(--ink-soft); }
-
-/* Outline */
-.outline { list-style: none; margin: 32px 0 0; padding: 0; }
-.outline li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 22px; padding: 24px 0; border-top: 1px solid var(--rule); }
-.outline li:last-child { border-bottom: 1px solid var(--rule); }
-.outline-i { font-family: var(--font-serif); font-size: 1rem; letter-spacing: .06em; color: var(--ink-mute); }
-.outline h3 { font-size: 1.15rem; margin: 0 0 6px; }
-.outline p { margin: 0; font-size: .95rem; color: var(--ink-soft); }
 
 /* Hypotheses */
 .hypotheses { margin-top: 32px; }
@@ -264,7 +258,6 @@ img { max-width: 100%; display: block; }
   .wrap { padding: 0 20px; }
   .keypoints ul { grid-template-columns: 1fr; }
   .figures > div { grid-template-columns: 1fr; gap: 6px; }
-  .outline li { grid-template-columns: 38px minmax(0, 1fr); gap: 14px; }
   .hypothesis { grid-template-columns: 1fr; gap: 10px; }
   .hyp-aside { flex-direction: row; align-items: baseline; gap: 12px; }
   .verdicts { grid-template-columns: 1fr; gap: 40px; }
