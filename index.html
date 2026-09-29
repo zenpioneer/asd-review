@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ASD in Children: Diagnostics and Therapy — Research Synopsis</title>
 <meta name="description" content="A synopsis of the current state of diagnostics and therapy for children with autism spectrum disorder, with a critical review of promising biological hypotheses: gut microbiota, intestinal permeability and aldehydes.">
-<meta name="author" content="Sergey Ivanovich">
+<meta name="author" content="Sergey Ivanovich Ivanenko">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ASD in Children: Diagnostics and Therapy">
@@ -14,12 +14,14 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>
   (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
     try {
       var saved = localStorage.getItem("asd-theme");
       var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
+      root.setAttribute("data-theme", theme);
     } catch (e) {
-      document.documentElement.setAttribute("data-theme", "light");
+      root.setAttribute("data-theme", "light");
     }
   })();
 </script>
@@ -29,36 +31,23 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="top">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">ASD</span>
-      <span class="brand-text">Research Synopsis</span>
-    </a>
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#relevance">Relevance</a></li>
-        <li><a href="#outline">Outline</a></li>
-        <li><a href="#hypotheses">Hypotheses</a></li>
-        <li><a href="#evidence">Evidence</a></li>
-        <li><a href="#author">Author</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </nav>
-    <div class="header-controls">
+<header class="masthead" id="top">
+  <div class="wrap masthead-inner">
+    <a class="wordmark" href="#top">Diagnostics&nbsp;&amp;&nbsp;Therapy of ASD</a>
+    <div class="masthead-tools">
       <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4.2"></circle>
-          <path d="M12 2.5v2.4M12 19.1v2.4M21.5 12h-2.4M4.9 12H2.5M18.7 5.3l-1.7 1.7M7 17l-1.7 1.7M18.7 18.7L17 17M7 7L5.3 5.3"></path>
+          <path d="M12 2.6v2.3M12 19.1v2.3M21.4 12h-2.3M4.9 12H2.6M18.7 5.3l-1.7 1.7M7 17l-1.7 1.7M18.7 18.7L17 17M7 7L5.3 5.3"></path>
         </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"></path>
         </svg>
         <span class="visually-hidden">Toggle theme</span>
       </button>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Contents</span>
+        <span class="menu-btn-bars" aria-hidden="true"></span>
       </button>
     </div>
   </div>
@@ -66,321 +55,320 @@
 
 <main id="main">
 
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <p class="eyebrow">Research synopsis · English</p>
-      <h1>Autism Spectrum Disorder in Children:<br>Diagnostics and Therapy</h1>
-      <p class="lede">
-        A structured review of the current state of diagnostics and therapy for children
-        with autism spectrum disorder (ASD), followed by a critical examination of
-        promising biological hypotheses — gut microbiota, increased intestinal
-        permeability and aldehydes as potential neurotoxic factors.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#outline">Read the outline</a>
-        <a class="btn btn-ghost" href="#hypotheses">Research hypotheses</a>
-      </div>
-      <div class="notice">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 3l9 16H3z"></path>
-          <path d="M12 10v4"></path>
-          <path d="M12 17.2h.01"></path>
-        </svg>
-        <p><strong>Not medical advice.</strong> This page is a scientific and educational
-          overview only. It is not a recommendation for diagnosis or treatment. Established
-          methods and experimental hypotheses are kept clearly separate.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="relevance" class="section">
+  <section class="intro">
     <div class="wrap">
-      <h2 class="section-title">Why this matters</h2>
-      <p class="section-intro">
-        Autism spectrum disorder is a heterogeneous neurodevelopmental condition
-        characterised by differences in social communication and by restricted,
-        repetitive patterns of behaviour and interests. Reported prevalence has risen
-        substantially over recent decades, and early identification is widely regarded
-        as the key to timely, individualised support.
-      </p>
-      <div class="stat-grid">
-        <article class="stat-card">
-          <p class="stat-value">~1 in 31</p>
-          <p class="stat-label">children aged 8 years identified with ASD in the most recent
-            U.S. ADDM Network surveillance report</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-value">Early</p>
-          <p class="stat-label">screening and diagnosis are recommended for better access
-            to developmental and behavioural support</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-value">Heterogeneous</p>
-          <p class="stat-label">aetiology and presentation — no single cause, biomarker or
-            treatment fits all children</p>
-        </article>
-      </div>
-      <p class="disclaimer-inline">
-        Prevalence figures vary by country, surveillance method and diagnostic criteria.
-        The numbers and sources on this page are being finalised for publication.
-      </p>
-    </div>
-  </section>
-
-  <section id="outline" class="section alt">
-    <div class="wrap">
-      <h2 class="section-title">Synopsis outline</h2>
-      <p class="section-intro">Five parts: from epidemiology and diagnosis to therapy and
-        emerging biological research.</p>
-
-      <ol class="outline-list">
-        <li class="outline-item">
-          <span class="outline-num">1</span>
-          <div>
-            <h3>Introduction</h3>
-            <p>The concept of ASD, its relevance, global prevalence, the rise in detected
-              cases and the value of early diagnosis and timely support.</p>
-          </div>
-        </li>
-        <li class="outline-item">
-          <span class="outline-num">2</span>
-          <div>
-            <h3>Diagnostics: current state worldwide</h3>
-            <p>DSM-5 / DSM-5-TR and ICD-11 criteria, screening and early detection,
-              clinical and differential assessment, multidisciplinary practice,
-              limitations and unequal access across regions.</p>
-          </div>
-        </li>
-        <li class="outline-item">
-          <span class="outline-num">3</span>
-          <div>
-            <h3>Therapy: current state worldwide</h3>
-            <p>Goals of care, behavioural and developmental interventions, speech and
-              language therapy, occupational therapy, educational programmes,
-              pharmacological management of co-occurring symptoms and family support.</p>
-          </div>
-        </li>
-        <li class="outline-item">
-          <span class="outline-num">4</span>
-          <div>
-            <h3>Biological hypotheses and research directions</h3>
-            <p>Gut microbiota, increased intestinal permeability (“leaky gut”) and
-              aldehydes as potential neurotoxic factors — evidence, contradictions and
-              open questions.</p>
-          </div>
-        </li>
-        <li class="outline-item">
-          <span class="outline-num">5</span>
-          <div>
-            <h3>Conclusion</h3>
-            <p>What is established in diagnostics and therapy, the value of early and
-              individualised care, and why experimental hypotheses must be separated
-              from validated practice.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="hypotheses" class="section">
-    <div class="wrap">
-      <h2 class="section-title">Research hypotheses</h2>
-      <p class="section-intro">
-        Section 4 of the synopsis reviews three biological directions. Each is labelled
-        by the strength of current evidence — none of them is an established treatment
-        target today.
-      </p>
-
-      <div class="hyp-grid">
-        <article class="hyp-card" data-level="emerging">
-          <div class="hyp-head">
-            <span class="hyp-index">4.1</span>
-            <span class="badge badge-emerging">Emerging evidence</span>
-          </div>
-          <h3>Gut microbiota</h3>
-          <p>
-            The gut microbiome interacts with immune, metabolic and nervous systems
-            through the so-called gut–brain axis. Studies in children with ASD report
-            differences in microbial composition, and animal work shows that
-            microbiota can influence behaviour. Causality in humans remains unproven,
-            and diet, medication and other confounders complicate interpretation.
-          </p>
-          <p class="hyp-status">Association, not causation.</p>
-        </article>
-
-        <article class="hyp-card" data-level="preliminary">
-          <div class="hyp-head">
-            <span class="hyp-index">4.2</span>
-            <span class="badge badge-preliminary">Preliminary</span>
-          </div>
-          <h3>Increased intestinal permeability</h3>
-          <p>
-            The intestinal barrier regulates what passes from the gut lumen into the
-            body. Increased permeability (“leaky gut”) has been linked to inflammatory
-            and metabolic processes and reported in some ASD cohorts, but cohorts are
-            small, assays differ and results are inconsistent.
-          </p>
-          <p class="hyp-status">Limited and mixed evidence.</p>
-        </article>
-
-        <article class="hyp-card" data-level="hypothesis">
-          <div class="hyp-head">
-            <span class="hyp-index">4.3</span>
-            <span class="badge badge-hypothesis">Hypothesis</span>
-          </div>
-          <h3>Aldehydes as neurotoxic factors</h3>
-          <p>
-            Aldehydes are reactive compounds formed endogenously and encountered in the
-            environment; they are detoxified by aldehyde dehydrogenases. Disturbed
-            aldehyde metabolism is biologically plausible as a contributor to
-            neurodevelopmental differences, but direct evidence in ASD is scarce and
-            largely preclinical. This part is presented explicitly as a hypothesis.
-          </p>
-          <p class="hyp-status">Hypothesis — under investigation.</p>
-        </article>
-      </div>
-
-      <div class="legend">
-        <span class="legend-title">Evidence levels used here:</span>
-        <span class="badge badge-emerging">Emerging evidence</span>
-        <span class="badge badge-preliminary">Preliminary</span>
-        <span class="badge badge-hypothesis">Hypothesis</span>
-      </div>
-
-      <div class="panel panel-ok panel-wide">
-        <h3>Aldehydes in the body — the established part</h3>
-        <p>
-          The hypothesis in 4.3 concerns a real and well-studied family of molecules.
-          What mainstream biochemistry actually supports:
+      <div class="intro-body">
+        <p class="overline">Research synopsis · autism spectrum disorder</p>
+        <h1>Diagnostics and therapy of autism spectrum disorder in children</h1>
+        <p class="standfirst">
+          A structured review of current diagnostics and therapy, followed by a critical
+          look at three biological hypotheses — the gut microbiota, increased intestinal
+          permeability, and aldehydes as potential neurotoxic factors.
         </p>
-        <ul class="check-list">
-          <li>Formaldehyde is a normal endogenous one-carbon metabolite, generated during
-            methyl-group metabolism and from methanol and demethylation reactions.</li>
-          <li>It is short-lived: it is cleared mainly through glutathione-dependent
-            pathways and aldehyde dehydrogenase (ALDH), being oxidised to formate and
-            fed into one-carbon and folate pools.</li>
-          <li>At elevated concentrations, aldehydes cross-link proteins and DNA and are
-            neurotoxic; impaired clearance is associated with oxidative stress and
-            inflammation.</li>
-          <li>In autism spectrum disorder specifically, a causal role is <em>not</em>
-            established — the evidence is preliminary and largely preclinical, which is
-            why the topic appears here as a hypothesis and not as a treatment target.</li>
-        </ul>
+        <p class="fineprint">
+          This is a scientific and educational overview, <strong>not medical advice</strong>.
+          Established methods and experimental hypotheses are kept strictly apart.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="evidence" class="section alt">
-    <div class="wrap">
-      <h2 class="section-title">What is supported — and what is not</h2>
-      <p class="section-intro">
-        Keeping this line clear is a central goal of the synopsis.
-      </p>
-      <div class="two-col">
-        <div class="panel panel-ok">
-          <h3>Supported by current evidence</h3>
-          <ul class="check-list">
-            <li>Systematic developmental screening and early comprehensive assessment.</li>
-            <li>Behavioural and developmental interventions (e.g. naturalistic
-              developmental-behavioural approaches, parent-mediated programmes).</li>
-            <li>Speech and language therapy and occupational therapy as indicated.</li>
-            <li>Educational support tailored to the child.</li>
-            <li>Selective medication for co-occurring symptoms (e.g. irritability),
-              prescribed and monitored by clinicians.</li>
-            <li>Support and training for families and caregivers.</li>
-          </ul>
-        </div>
-        <div class="panel panel-no">
-          <h3>Not supported / not recommended as ASD treatment</h3>
-          <ul class="cross-list">
-            <li>Chelation therapy.</li>
-            <li>Hyperbaric oxygen therapy.</li>
-            <li>Secretin.</li>
-            <li>Antibiotics as a treatment for ASD itself.</li>
-            <li>Restrictive elimination diets marketed as ASD treatment.</li>
-            <li>Any intervention that has not been shown effective in controlled
-              studies.</li>
-          </ul>
-          <p class="panel-note">
-            Some of these carry real risk of harm. Decisions about care belong with
-            qualified clinicians.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="wrap shell">
 
-  <section id="author" class="section">
-    <div class="wrap author-wrap">
-      <div class="author-photo" aria-hidden="true">SI</div>
-      <div class="author-body">
-        <h2 class="section-title">Author</h2>
+    <aside class="rail">
+      <nav id="primary-nav" class="primary-nav" aria-label="Contents">
+        <p class="rail-title">Contents</p>
+        <ol>
+          <li><a href="#relevance"><span class="rail-num">01</span><span>Relevance</span></a></li>
+          <li><a href="#outline"><span class="rail-num">02</span><span>Outline</span></a></li>
+          <li><a href="#hypotheses"><span class="rail-num">03</span><span>Hypotheses</span></a></li>
+          <li><a href="#evidence"><span class="rail-num">04</span><span>Evidence</span></a></li>
+          <li><a href="#author"><span class="rail-num">05</span><span>Author</span></a></li>
+          <li><a href="#references"><span class="rail-num">06</span><span>References</span></a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <article class="content">
+
+      <section id="relevance" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">01</span>
+          <h2>Why this matters</h2>
+        </header>
+        <p>
+          Autism spectrum disorder is a heterogeneous neurodevelopmental condition
+          characterised by differences in social communication and by restricted,
+          repetitive patterns of behaviour and interests. Reported prevalence has risen
+          substantially over recent decades, and early identification is widely regarded
+          as the key to timely, individualised support.
+        </p>
+        <dl class="figures">
+          <div>
+            <dt>~1 in 31</dt>
+            <dd>children aged 8 years identified with ASD in the most recent U.S. ADDM
+              Network surveillance report.</dd>
+          </div>
+          <div>
+            <dt>Earlier is better</dt>
+            <dd>screening and diagnosis are recommended to open access to developmental and
+              behavioural support sooner.</dd>
+          </div>
+          <div>
+            <dt>No single cause</dt>
+            <dd>aetiology and presentation are heterogeneous — no one biomarker or
+              treatment fits every child.</dd>
+          </div>
+        </dl>
+        <p class="note">
+          Prevalence figures vary by country, surveillance method and diagnostic criteria.
+          The figures and sources on this page are being finalised for publication.
+        </p>
+      </section>
+
+      <section id="outline" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">02</span>
+          <h2>Synopsis outline</h2>
+        </header>
+        <p>
+          Five parts, from epidemiology and diagnosis to therapy and emerging biological
+          research.
+        </p>
+        <ol class="outline">
+          <li>
+            <span class="outline-i">I</span>
+            <div>
+              <h3>Introduction</h3>
+              <p>The concept of ASD, its relevance, global prevalence, the rise in detected
+                cases and the value of early diagnosis and timely support.</p>
+            </div>
+          </li>
+          <li>
+            <span class="outline-i">II</span>
+            <div>
+              <h3>Diagnostics: current state worldwide</h3>
+              <p>DSM-5 / DSM-5-TR and ICD-11 criteria, screening and early detection,
+                clinical and differential assessment, multidisciplinary practice,
+                limitations and unequal access across regions.</p>
+            </div>
+          </li>
+          <li>
+            <span class="outline-i">III</span>
+            <div>
+              <h3>Therapy: current state worldwide</h3>
+              <p>Goals of care, behavioural and developmental interventions, speech and
+                language therapy, occupational therapy, educational programmes,
+                pharmacological management of co-occurring symptoms and family support.</p>
+            </div>
+          </li>
+          <li>
+            <span class="outline-i">IV</span>
+            <div>
+              <h3>Biological hypotheses and research directions</h3>
+              <p>Gut microbiota, increased intestinal permeability (“leaky gut”) and
+                aldehydes as potential neurotoxic factors — evidence, contradictions and
+                open questions.</p>
+            </div>
+          </li>
+          <li>
+            <span class="outline-i">V</span>
+            <div>
+              <h3>Conclusion</h3>
+              <p>What is established in diagnostics and therapy, the value of early and
+                individualised care, and why experimental hypotheses must be separated
+                from validated practice.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="hypotheses" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">03</span>
+          <h2>Research hypotheses</h2>
+        </header>
+        <p>
+          Section 4 of the synopsis reviews three biological directions. Each carries a
+          label for the strength of current evidence; none is an established treatment
+          target today.
+        </p>
+
+        <div class="hypotheses">
+          <article class="hypothesis">
+            <div class="hyp-aside">
+              <span class="hyp-num">4.1</span>
+              <span class="evidence evidence--emerging">Emerging</span>
+            </div>
+            <div class="hyp-main">
+              <h3>Gut microbiota</h3>
+              <p>The gut microbiome interacts with immune, metabolic and nervous systems
+                through the so-called gut–brain axis. Studies in children with ASD report
+                differences in microbial composition, and animal work shows that
+                microbiota can influence behaviour. Causality in humans remains unproven,
+                and diet, medication and other confounders complicate interpretation.</p>
+              <p class="verdict">Association, not causation.</p>
+            </div>
+          </article>
+
+          <article class="hypothesis">
+            <div class="hyp-aside">
+              <span class="hyp-num">4.2</span>
+              <span class="evidence evidence--preliminary">Preliminary</span>
+            </div>
+            <div class="hyp-main">
+              <h3>Increased intestinal permeability</h3>
+              <p>The intestinal barrier regulates what passes from the gut lumen into the
+                body. Increased permeability (“leaky gut”) has been linked to inflammatory
+                and metabolic processes and reported in some ASD cohorts, but cohorts are
+                small, assays differ and results are inconsistent.</p>
+              <p class="verdict">Limited and mixed evidence.</p>
+            </div>
+          </article>
+
+          <article class="hypothesis">
+            <div class="hyp-aside">
+              <span class="hyp-num">4.3</span>
+              <span class="evidence evidence--hypothesis">Hypothesis</span>
+            </div>
+            <div class="hyp-main">
+              <h3>Aldehydes as neurotoxic factors</h3>
+              <p>Aldehydes are reactive compounds formed endogenously and encountered in
+                the environment; they are detoxified by aldehyde dehydrogenases. Disturbed
+                aldehyde metabolism is biologically plausible as a contributor to
+                neurodevelopmental differences, but direct evidence in ASD is scarce and
+                largely preclinical. This part is presented explicitly as a hypothesis.</p>
+              <p class="verdict">Hypothesis — under investigation.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="background">
+          <p class="background-label">Background</p>
+          <h3>Aldehydes in the body — the established part</h3>
+          <p>The hypothesis in 4.3 concerns a real and well-studied family of molecules.
+            What mainstream biochemistry actually supports:</p>
+          <ul class="facts">
+            <li>Formaldehyde is a normal endogenous one-carbon metabolite, generated during
+              methyl-group metabolism and from methanol and demethylation reactions.</li>
+            <li>It is short-lived: it is cleared mainly through glutathione-dependent
+              pathways and aldehyde dehydrogenase (ALDH), oxidised to formate and fed into
+              one-carbon and folate pools.</li>
+            <li>At elevated concentrations, aldehydes cross-link proteins and DNA and are
+              neurotoxic; impaired clearance is associated with oxidative stress and
+              inflammation.</li>
+            <li>In autism spectrum disorder specifically, a causal role is <em>not</em>
+              established — the evidence is preliminary and largely preclinical, which is
+              why the topic is presented as a hypothesis and not as a treatment target.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="evidence" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">04</span>
+          <h2>What is supported — and what is not</h2>
+        </header>
+        <p>Keeping this line clear is a central goal of the synopsis.</p>
+        <div class="verdicts">
+          <div>
+            <p class="verdict-label verdict-label--yes">Supported by current evidence</p>
+            <ul class="yes-list">
+              <li>Systematic developmental screening and early comprehensive assessment.</li>
+              <li>Behavioural and developmental interventions — naturalistic
+                developmental-behavioural approaches, parent-mediated programmes.</li>
+              <li>Speech and language therapy and occupational therapy as indicated.</li>
+              <li>Educational support tailored to the child.</li>
+              <li>Selective medication for co-occurring symptoms such as irritability,
+                prescribed and monitored by clinicians.</li>
+              <li>Support and training for families and caregivers.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="verdict-label verdict-label--no">Not supported as ASD treatment</p>
+            <ul class="no-list">
+              <li>Chelation therapy.</li>
+              <li>Hyperbaric oxygen therapy.</li>
+              <li>Secretin.</li>
+              <li>Antibiotics as a treatment for ASD itself.</li>
+              <li>Restrictive elimination diets marketed as ASD treatment.</li>
+              <li>Any intervention not shown effective in controlled studies.</li>
+            </ul>
+            <p class="note">Some of these carry a real risk of harm. Decisions about care
+              belong with qualified clinicians.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="author" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">05</span>
+          <h2>Author</h2>
+        </header>
         <p class="author-name">Sergey Ivanovich Ivanenko</p>
         <p class="author-role">Head, WWMA AG — World Wide Medical Assistance AG (Switzerland)</p>
-        <p class="author-bio">
-          A personal research overview of the diagnostics and therapy of autism
-          spectrum disorder in children and of selected biological hypotheses.
-          Contact details will be added here before publication.
+        <p>A personal research overview of the diagnostics and therapy of autism spectrum
+          disorder in children and of selected biological hypotheses.</p>
+        <p class="contact">
+          <a href="tel:+34621359714">Phone +34 621 359 714</a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a href="https://t.me/+34621359714" rel="noopener">Telegram</a>
         </p>
-        <ul class="author-links">
-          <li><span>Phone</span> <a href="tel:+34621359714">+34 621 359 714</a></li>
-          <li><span>Telegram</span> <a href="https://t.me/+34621359714">+34 621 359 714</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="references" class="section alt">
-    <div class="wrap">
-      <h2 class="section-title">References</h2>
-      <p class="section-intro">
-        Vancouver style. The list below is a starting set of key sources and is being
-        expanded and verified; the full bibliography accompanies the manuscript.
-      </p>
-      <ol class="ref-list">
-        <li>American Psychiatric Association. Diagnostic and Statistical Manual of Mental
-          Disorders, Fifth Edition, Text Revision (DSM-5-TR). Washington, DC: APA; 2022.</li>
-        <li>World Health Organization. International Classification of Diseases, 11th
-          Revision (ICD-11). Geneva: WHO; 2019/2022.</li>
-        <li>Lord C, Elsabbagh M, Baird G, Veenstra-Vanderweele J. Autism spectrum disorder.
-          Lancet. 2018;392(10146):508–520.</li>
-        <li>Hyman SL, Levy SE, Myers SM; Council on Children with Disabilities, Section on
-          Developmental and Behavioral Pediatrics. Identification, evaluation, and
-          management of children with autism spectrum disorder. Pediatrics.
-          2020;145(1):e20193447.</li>
-        <li>Maenner MJ, Warren Z, Williams AR, et al. Prevalence and characteristics of
-          autism spectrum disorder among children aged 8 years — Autism and Developmental
-          Disabilities Monitoring Network, United States. MMWR Surveill Summ. (most recent
-          surveillance year).</li>
-        <li>Hsiao EY, McBride SW, Hsien S, et al. Microbiota modulate behavioral and
-          physiological abnormalities associated with neurodevelopmental disorders. Cell.
-          2013;155(7):1451–1463.</li>
-        <li>Sharon G, Cruz NJ, Kang DW, et al. Human gut microbiota from autism spectrum
-          disorder promote behavioral symptoms in mice. Cell. 2019;177(6):1600–1618.</li>
-        <li>Yap CX, Henders AK, Alvares GA, et al. Autism-related dietary preferences
-          mediate autism–gut microbiome associations. Cell. 2021;184(24):5916–5931.</li>
-        <li>Fiorentino M, Sapone A, Senger S, et al. Blood–brain barrier and intestinal
-          epithelial barrier alterations in autism spectrum disorders. Mol Autism. 2016;7:49.</li>
-      </ol>
-    </div>
-  </section>
+      <section id="references" class="chapter reveal">
+        <header class="chapter-head">
+          <span class="chapter-num">06</span>
+          <h2>References</h2>
+        </header>
+        <p class="note">Vancouver style. A starting set of key sources, being expanded and
+          verified; the full bibliography accompanies the manuscript.</p>
+        <ol class="references">
+          <li>American Psychiatric Association. Diagnostic and Statistical Manual of Mental
+            Disorders, Fifth Edition, Text Revision (DSM-5-TR). Washington, DC: APA; 2022.</li>
+          <li>World Health Organization. International Classification of Diseases, 11th
+            Revision (ICD-11). Geneva: WHO; 2019/2022.</li>
+          <li>Lord C, Elsabbagh M, Baird G, Veenstra-Vanderweele J. Autism spectrum disorder.
+            Lancet. 2018;392(10146):508–520.</li>
+          <li>Hyman SL, Levy SE, Myers SM; Council on Children with Disabilities, Section on
+            Developmental and Behavioral Pediatrics. Identification, evaluation, and
+            management of children with autism spectrum disorder. Pediatrics.
+            2020;145(1):e20193447.</li>
+          <li>Maenner MJ, Warren Z, Williams AR, et al. Prevalence and characteristics of
+            autism spectrum disorder among children aged 8 years — Autism and Developmental
+            Disabilities Monitoring Network, United States. MMWR Surveill Summ. (most recent
+            surveillance year).</li>
+          <li>Hsiao EY, McBride SW, Hsien S, et al. Microbiota modulate behavioral and
+            physiological abnormalities associated with neurodevelopmental disorders. Cell.
+            2013;155(7):1451–1463.</li>
+          <li>Sharon G, Cruz NJ, Kang DW, et al. Human gut microbiota from autism spectrum
+            disorder promote behavioral symptoms in mice. Cell. 2019;177(6):1600–1618.</li>
+          <li>Yap CX, Henders AK, Alvares GA, et al. Autism-related dietary preferences
+            mediate autism–gut microbiome associations. Cell. 2021;184(24):5916–5931.</li>
+          <li>Fiorentino M, Sapone A, Senger S, et al. Blood–brain barrier and intestinal
+            epithelial barrier alterations in autism spectrum disorders. Mol Autism.
+            2016;7:49.</li>
+        </ol>
+      </section>
 
+    </article>
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p class="footer-title">Autism Spectrum Disorder in Children: Diagnostics and Therapy</p>
-    <p class="footer-disc">
+<footer class="colophon">
+  <div class="wrap colophon-inner">
+    <p class="colophon-title">Diagnostics and therapy of autism spectrum disorder in children</p>
+    <p class="colophon-note">
       This page is for scientific and educational purposes. It is not medical advice and
       does not replace consultation with a qualified clinician. Mention of a hypothesis
       does not imply that it is an established diagnostic or therapeutic method.
     </p>
-    <p class="footer-meta">
+    <p class="colophon-meta">
       <span>© <span id="year">2026</span> Sergey Ivanovich Ivanenko</span>
-      <span class="footer-sep" aria-hidden="true">·</span>
+      <span class="dot" aria-hidden="true">·</span>
       <a href="#top">Back to top</a>
     </p>
-    <p class="footer-credit">
+    <p class="colophon-credit">
       Background photo: “Dokkadeltaet nord i Randsfjorden” by Øyvind Holmstad (CC0).
       Typefaces: Inter and Source Serif 4 (SIL Open Font License 1.1).
     </p>
